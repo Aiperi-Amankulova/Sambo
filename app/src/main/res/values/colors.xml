@@ -8,6 +8,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    // backgraund
+    // background
     <color name="bcg_as">#1731C5</color>
+
+    //tab
+    <color name="tab1">#8B98E2</color>
 </resources>
