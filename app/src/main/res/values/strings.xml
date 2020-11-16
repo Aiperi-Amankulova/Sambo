@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Sambo</string>
+    
+    //Text from project
+    <string name="first_text_in_onboard">Узнавай новости \nиз мира самбо</string>
+    <string name="second_text_in_onboard">Учись у лучших \nспортсменов</string>
+    <string name="third_text_in_onboard">Стань частью \nсообщества</string>
+
+    //Text from button
+    <string name="next">Пропустить</string>
 </resources>
