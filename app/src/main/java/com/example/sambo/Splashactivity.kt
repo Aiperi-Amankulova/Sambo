@@ -4,11 +4,12 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
+import com.example.sambo.ui.MainActivity
 
-class AsActivity : AppCompatActivity() {
+class Splashactivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_as)
+        setContentView(R.layout.activity_splash)
         Handler().postDelayed({
             selectActivity()
         },4000)
@@ -17,11 +18,11 @@ class AsActivity : AppCompatActivity() {
 
     private fun selectActivity(){
         if (PreferenceHelper.getIsSecondLaunch()){
-            startActivity(Intent(applicationContext, OnBoardingActivity:: class.java))
+            startActivity(Intent(applicationContext, MainActivity:: class.java))
             finish()
         }
         else {
-            startActivity(Intent(this, OnBoardingActivity::class.java))
+            startActivity(Intent(this, MainActivity::class.java))
             finish()
         }
     }
