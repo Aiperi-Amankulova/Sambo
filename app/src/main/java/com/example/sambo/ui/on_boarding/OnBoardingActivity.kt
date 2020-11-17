@@ -21,44 +21,42 @@ class OnBoardingActivity : AppCompatActivity() {
     }
 
     private fun setupListener() {
-        vp_page.setOnPageChangeListener(object  : ViewPager.OnPageChangeListener{
+        vp_page.setOnPageChangeListener(object : ViewPager.OnPageChangeListener {
             override fun onPageScrolled(
-                position: Int,
-                positionOffset: Float,
-                positionOffsetPixels: Int
-            ) {}
-
+                    position: Int,
+                    positionOffset: Float,
+                    positionOffsetPixels: Int
+            ) {
+            }
             override fun onPageSelected(position: Int) {
-                if (checktoPage(position)){
+                if (checktoPage(position)) {
                     btn_go.text = "Продолжить"
                 } else {
                     btn_go.text = "Пропустить"
                 }
             }
-
             override fun onPageScrollStateChanged(state: Int) {}
         })
 
         btn_go.setOnClickListener {
-            if (checktoPage(vp_page.currentItem)){
-                startActivity(Intent(this, MainActivity:: class.java))
+            if (checktoPage(vp_page.currentItem)) {
+                startActivity(Intent(this, MainActivity::class.java))
                 finish()
-            } else{
+            } else {
                 vp_page.currentItem += 1
             }
         }
     }
 
-    private fun checktoPage(position : Int) = position == list.size -1
+    private fun checktoPage(position: Int) = position == list.size - 1
 
     private fun setupViewPager() {
         val adapterl = OnBoardingAdapter(supportFragmentManager)
         vp_page.adapter = adapterl
-        list.add(OnBoardingFragment.getInstance(DataOnBoard(R.drawable.first_on_board,getString(R.string.first_text_in_onboard))))
-        list.add(OnBoardingFragment.getInstance(DataOnBoard(R.drawable.second_on_board,getString(R.string.second_text_in_onboard))))
-        list.add(OnBoardingFragment.getInstance(DataOnBoard(R.drawable.third_on_board,getString(R.string.third_text_in_onboard))))
+        list.add(OnBoardingFragment.getInstance(DataOnBoard(R.drawable.first_on_board, getString(R.string.first_text_in_onboard))))
+        list.add(OnBoardingFragment.getInstance(DataOnBoard(R.drawable.second_on_board, getString(R.string.second_text_in_onboard))))
+        list.add(OnBoardingFragment.getInstance(DataOnBoard(R.drawable.third_on_board, getString(R.string.third_text_in_onboard))))
         adapterl.update(list)
         slide.setupWithViewPager(vp_page)
-
     }
 }

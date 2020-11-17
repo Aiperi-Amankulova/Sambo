@@ -5,6 +5,6 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 data class DataOnBoard (
-    val image : Int,
+    val img : Int,
     val text : String
 ) : Parcelable
