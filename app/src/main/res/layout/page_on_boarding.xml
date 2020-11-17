@@ -21,7 +21,7 @@
         app:tabBackground="@drawable/backgound_tab"
         android:background="@android:color/transparent"
         app:tabIndicatorHeight="0dp"
-        android:layout_marginBottom="20dp"
+        android:paddingLeft="10dp"
         app:layout_constraintBottom_toBottomOf="@id/vp_page"/>
 
     <androidx.appcompat.widget.AppCompatButton
@@ -31,6 +31,8 @@
         android:layout_height="wrap_content"
         android:text="@string/next"
         android:textSize="16sp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="15dp"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
