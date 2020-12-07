@@ -8,4 +8,26 @@
 
     //Text from button
     <string name="next">Пропустить</string>
+
+    //Text in registration
+    <string name="text_in_tv">Привет! \nТы тут впервые?</string>
+    <string name="btn_registr">Регистрация </string>
+
+
+    <string name="player">Курсы</string>
+    //Bottom Navigation
+    <string name="btn_log_on">Вход</string>
+    <string name="main">Главная</string>
+    <string name="my_profile">Мой профиль</string>
+    <string name="reward">Соревнования</string>
+    <string name="photo">Изменить \n фото</string>
+    <string name="_1234">школа 1234</string>
+    <string name="Contact_with_me">Связаться со мной</string>
+    <string name="vk_com_konstantinov">vk.com/konstantinov</string>
+    <string name="instagram_com_konstantinov">instagram.com/konstantinov</string>
+    <string name="about_me">Обо мне</string>
+    <string name="KMS">КМС по самбо</string>
+    <string name="sitting">Настройки личной информации</string>
+    <string name="about_project">О проекте</string>
+    <string name="exit">Выход</string>
 </resources>
