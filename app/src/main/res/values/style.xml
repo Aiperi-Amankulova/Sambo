@@ -12,4 +12,8 @@
         <item name="android:textColor">@color/black</item>
         <item name="android:layout_marginLeft">20dp</item>
     </style>
+<!--    <style name="recyclerview">-->
+<!--        <item name="android:fontFamily">@font/gothamfont</item>-->
+<!--        <item name=""-->
+<!--    </style>-->
 </resources>
