@@ -8,18 +8,23 @@
 
     //Text from button
     <string name="next">Пропустить</string>
+    <string name="btn_log_on">Вход</string>
+    <string name="main">Главная</string>
 
     //Text in registration
     <string name="text_in_tv">Привет! \nТы тут впервые?</string>
     <string name="btn_registr">Регистрация </string>
-
-
+    <string name="d">Выбери свою роль</string>
+    <string name="sambo">Самбист</string>
+    <string name="trener">Тренер</string>
+    <string name="ncjnf">Родитель</string>
     <string name="player">Курсы</string>
+
     //Bottom Navigation
-    <string name="btn_log_on">Вход</string>
-    <string name="main">Главная</string>
     <string name="my_profile">Мой профиль</string>
     <string name="reward">Соревнования</string>
+
+    //Profile
     <string name="photo">Изменить \n фото</string>
     <string name="_1234">школа 1234</string>
     <string name="Contact_with_me">Связаться со мной</string>
@@ -30,6 +35,9 @@
     <string name="sitting">Настройки личной информации</string>
     <string name="about_project">О проекте</string>
     <string name="exit">Выход</string>
+
+    //Competition
     <string name="competition">Соревнования</string>
     <string name="education">Обучение</string>
+    <string name="covid">Из-за ковида соревнования на паузе:( \nСкоро они вернутся, \nа пока тренируйся вместе с нами онлайн!</string>
 </resources>

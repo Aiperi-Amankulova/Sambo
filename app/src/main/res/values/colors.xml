@@ -13,4 +13,8 @@
 
     //tab
     <color name="tab1">#8B98E2</color>
+    <color name="bottom_nav">#A8B2B9</color>
+
+    //for button
+    <color name="red_btn">#E92231</color>
 </resources>
