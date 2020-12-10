@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bcg_as">
@@ -56,7 +56,7 @@
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/profile_layout"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="30dp"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -69,7 +69,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="45dp"
                             android:layout_marginTop="30dp"
-                            android:src="@drawable/ptofile"
+                            android:src="@drawable/ic_user"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent" />
 
@@ -85,9 +85,10 @@
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/information_layout"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/profile_layout">
 
@@ -95,17 +96,17 @@
                             android:id="@+id/img_inform"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginRight="35dp"
-                            android:src="@drawable/information"
+                            android:src="@drawable/ic_information"
+                            android:layout_marginLeft="45dp"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent" />
 
                         <TextView
                             style="@style/tv_blue"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="18dp"
+                            android:layout_marginTop="4dp"
                             android:text="@string/about_project"
                             app:layout_constraintLeft_toRightOf="@+id/img_inform"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -115,10 +116,10 @@
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/location_layout"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="45dp"
                         android:layout_marginTop="20dp"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/information_layout">
 
@@ -126,8 +127,8 @@
                             android:id="@+id/img_place"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="28dp"
-                            android:src="@drawable/place"
+                            android:layout_marginLeft="45dp"
+                            android:src="@drawable/ic_place"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
@@ -136,6 +137,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
+                            android:layout_marginLeft="18dp"
                             android:text="Смотреть карту школ на сайте"
                             app:layout_constraintLeft_toRightOf="@+id/img_place"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -143,12 +145,12 @@
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/exit_layout"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        android:layout_marginLeft="45dp"
+                        android:layout_marginTop="40dp"
                         android:layout_marginBottom="30dp"
-                        android:layout_marginTop="20dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/location_layout">
 
@@ -156,8 +158,8 @@
                             android:id="@+id/img_exit"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/exit"
-                            android:layout_marginLeft="30dp"
+                            android:layout_marginLeft="48dp"
+                            android:src="@drawable/ic_exit"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
@@ -166,18 +168,24 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
+                            android:layout_marginBottom="60dp"
                             android:text="@string/exit"
+                            android:layout_marginLeft="15dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintLeft_toRightOf="@+id/img_exit"
-                            app:layout_constraintTop_toTopOf="parent"/>
+                            app:layout_constraintTop_toTopOf="parent" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
-                     <com.google.android.material.bottomnavigation.BottomNavigationView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:menu="@menu/bottom_nav"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/exit_layout"
-                        android:background="@color/white"/>
+                    <com.google.android.material.bottomnavigation.BottomNavigationView
+                        android:id="@+id/bottomNavigation"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:background="#EBF8F8F8"
+                        app:itemIconTint="@drawable/bottom_nav"
+                        app:itemTextColor="@drawable/bottom_nav"
+                        app:labelVisibilityMode="labeled"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:menu="@menu/bottom_nav" />
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/card_two"
@@ -264,10 +272,10 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="20dp"
+                                android:layout_marginTop="5dp"
                                 android:text="@string/vk_com_konstantinov"
                                 android:textColor="@color/black"
                                 android:textSize="16dp"
-                                android:layout_marginTop="5dp"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/con" />
 
@@ -296,8 +304,8 @@
                                 style="@style/tv_black"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/KMS"
                                 android:layout_marginTop="5dp"
+                                android:text="@string/KMS"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/tv_about" />
 
@@ -306,6 +314,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="20dp"
                                 android:background="@color/white"
+                                android:layout_marginRight="15dp"
                                 android:src="@drawable/ic_edit"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
