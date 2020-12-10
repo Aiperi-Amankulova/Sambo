@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sambo">
         <activity android:name=".ui.on_boarding.OnBoardingActivity"/>
+        <activity android:name=".ui.RegistrationActivity"/>
+        <activity android:name=".ui.RegistrationActivityTwo"/>
+        <activity android:name=".ui.MainActivity"/>
         <activity android:name=".splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
