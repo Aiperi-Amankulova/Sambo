@@ -8,6 +8,7 @@ import androidx.viewpager.widget.ViewPager
 import com.example.sambo.R
 import com.example.sambo.data.DataOnBoard
 import com.example.sambo.ui.MainActivity
+import com.example.sambo.ui.RegistrationActivity
 import kotlinx.android.synthetic.main.page_on_boarding.*
 
 class OnBoardingActivity : AppCompatActivity() {
@@ -40,7 +41,7 @@ class OnBoardingActivity : AppCompatActivity() {
 
         btn_go.setOnClickListener {
             if (checktoPage(vp_page.currentItem)) {
-                startActivity(Intent(this, MainActivity::class.java))
+                startActivity(Intent(this, RegistrationActivity::class.java))
                 finish()
             } else {
                 vp_page.currentItem += 1
@@ -53,9 +54,9 @@ class OnBoardingActivity : AppCompatActivity() {
     private fun setupViewPager() {
         val adapterl = OnBoardingAdapter(supportFragmentManager)
         vp_page.adapter = adapterl
-        list.add(OnBoardingFragment.getInstance(DataOnBoard(R.drawable.first_on_board, getString(R.string.first_text_in_onboard))))
-        list.add(OnBoardingFragment.getInstance(DataOnBoard(R.drawable.second_on_board, getString(R.string.second_text_in_onboard))))
-        list.add(OnBoardingFragment.getInstance(DataOnBoard(R.drawable.third_on_board, getString(R.string.third_text_in_onboard))))
+        list.add(OnBoardingFragment.getInstance(DataOnBoard(R.drawable.thir, getString(R.string.first_text_in_onboard))))
+        list.add(OnBoardingFragment.getInstance(DataOnBoard(R.drawable.se, getString(R.string.second_text_in_onboard))))
+        list.add(OnBoardingFragment.getInstance(DataOnBoard(R.drawable.first_onb, getString(R.string.third_text_in_onboard))))
         adapterl.update(list)
         slide.setupWithViewPager(vp_page)
     }
