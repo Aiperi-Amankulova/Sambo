@@ -3,11 +3,11 @@
     <style name="tv_blue">
         <item name="android:textColor">#1731C5</item>
         <item name="android:textSize">16dp</item>
-        <item name="android:fontFamily">@font/gothamfont</item>
+        <item name="android:fontFamily">@font/gilro_regular</item>
         <item name="android:layout_marginLeft">20dp</item>
     </style>
     <style name="tv_black">
-        <item name="android:fontFamily">@font/gothamfont</item>
+        <item name="android:fontFamily">@font/gilro_regular</item>
         <item name="android:textSize">16dp</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:layout_marginLeft">20dp</item>
