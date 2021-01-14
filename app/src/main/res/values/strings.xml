@@ -40,4 +40,6 @@
     <string name="competition">Соревнования</string>
     <string name="education">Обучение</string>
     <string name="covid">Из-за ковида соревнования на паузе:( \nСкоро они вернутся, \nа пока тренируйся вместе с нами онлайн!</string>
+    <string name="next_on_board">Продолжить</string>
+    <string name="skip">Пропустить</string>
 </resources>

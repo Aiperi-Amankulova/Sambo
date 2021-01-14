@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/splash_fragment_for_main"
+    tools:ignore="UnusedNavigation">
+
+    <fragment
+        android:id="@+id/splash_fragment_for_main"
+        android:name="com.example.sambo.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/splash_fragment_for_general_main"
+            app:destination="@id/general_on_boarding_fragment" />
+    </fragment>
+    <fragment android:id="@+id/general_on_boarding_fragment"
+        android:name="com.example.sambo.ui.on_boarding.OnBoardingGeneralFragment"
+        tools:layout="@layout/page_on_boarding"
+        android:label="on_boarding_fragment">
+        <action android:id="@+id/main_on_boarding_fragment"
+            app:destination="@+id/first_registration_fragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/first_registration_fragment"
+        android:name="com.example.sambo.ui.RegistrationFragment"
+        android:label="fragment_first_stage_registration"
+        tools:layout="@layout/fragment_registration">
+        <action
+            android:id="@+id/first_fragment_for_general_main"
+            app:destination="@+id/second_registration_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/second_registration_fragment"
+        android:name="com.example.sambo.ui.RegistrationTwoFragment"
+        android:label="fragment_second_stage_registration"
+        tools:layout="@layout/fragment_registration_two" />
+
+</navigation>

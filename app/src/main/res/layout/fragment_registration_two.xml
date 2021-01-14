@@ -68,7 +68,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_sam" />
 
     <Button
-        android:id="@+id/btn_parend"
+        android:id="@+id/btn_parent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
