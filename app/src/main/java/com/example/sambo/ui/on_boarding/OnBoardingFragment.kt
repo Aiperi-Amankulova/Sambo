@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.sambo.R
-import com.example.sambo.data.DataOnBoard
 import kotlinx.android.synthetic.main.view_on_boarding.*
 
 class OnBoardingFragment : Fragment() {
@@ -24,7 +23,7 @@ class OnBoardingFragment : Fragment() {
     }
 
     private fun setupViews() {
-        val data = arguments?.get(DATA_ID) as DataOnBoard
+        val data = arguments?.get(DATA_ID) as OnBoardingModal
         first_tv.text = data.text
         img.setImageResource(data.img)
 
@@ -33,7 +32,7 @@ class OnBoardingFragment : Fragment() {
     companion object {
         const val DATA_ID = "DATA_ID"
 
-        fun getInstance(data: DataOnBoard): OnBoardingFragment {
+        fun getInstance(data: OnBoardingModal): OnBoardingFragment {
             val fragment = OnBoardingFragment()
             val bundle = Bundle()
             bundle.putParcelable(DATA_ID, data)

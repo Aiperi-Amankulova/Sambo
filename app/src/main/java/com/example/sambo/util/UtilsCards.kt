@@ -1,11 +1,12 @@
-package com.example.sambo.utils
+package com.example.sambo.util
 
 import androidx.recyclerview.widget.DiffUtil
+import com.example.sambo.data.model.home_cards.RowsItem
 
-object CurseUtils {
+object UtilsCards {
 
-    val diffUtilCards = object: DiffUtil.ItemCallback<RowItem>(){
-        override fun areItemsTheSame(oldItem: RowItem, newItem: RowItem): Boolean {
+    val diffUtilCards = object: DiffUtil.ItemCallback<RowsItem>(){
+        override fun areItemsTheSame(oldItem: RowsItem, newItem: RowsItem): Boolean {
             return oldItem.comments_count == newItem.comments_count
                     && oldItem.content  == newItem.content
                     && oldItem.created_at == newItem.created_at
@@ -15,11 +16,11 @@ object CurseUtils {
                     && oldItem.material_type == newItem.material_type
                     && oldItem.preview == newItem.preview
                     && oldItem.rank == newItem.rank
-                    && oldItem.title == newItem.title
+                    && oldItem.text == newItem.text
                     && oldItem.updated_at == newItem.updated_at
         }
 
-        override fun areContentsTheSame(oldItem: RowItem, newItem: RowItem): Boolean {
+        override fun areContentsTheSame(oldItem: RowsItem, newItem: RowsItem): Boolean {
             return oldItem == newItem
         }
     }
