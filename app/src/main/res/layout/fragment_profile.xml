@@ -6,6 +6,20 @@
     android:layout_height="match_parent"
     android:background="@color/bcg_as">
 
+    <TextView
+        android:id="@+id/tv_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/gothamfont"
+        android:text="@string/my_profile"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.core.widget.NestedScrollView
         android:id="@+id/scroll"
         android:layout_width="match_parent"
@@ -16,19 +30,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/tv_profile"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="40dp"
-                android:layout_marginTop="40dp"
-                android:fontFamily="@font/gothamfont"
-                android:text="@string/my_profile"
-                android:textColor="@color/white"
-                android:textSize="30sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/card"
@@ -96,8 +97,8 @@
                             android:id="@+id/img_inform"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/ic_information"
                             android:layout_marginLeft="45dp"
+                            android:src="@drawable/ic_information"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent" />
 
@@ -136,8 +137,8 @@
                             style="@style/tv_blue"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="5dp"
                             android:layout_marginLeft="18dp"
+                            android:layout_marginTop="5dp"
                             android:text="Смотреть карту школ на сайте"
                             app:layout_constraintLeft_toRightOf="@+id/img_place"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -164,14 +165,14 @@
                             app:layout_constraintTop_toTopOf="parent" />
 
                         <TextView
-                            style="@style/tv_blue"
                             android:id="@+id/tv_exit"
+                            style="@style/tv_blue"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
                             android:layout_marginTop="5dp"
                             android:layout_marginBottom="60dp"
                             android:text="@string/exit"
-                            android:layout_marginLeft="15dp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintLeft_toRightOf="@+id/img_exit"
                             app:layout_constraintTop_toTopOf="parent" />
@@ -266,7 +267,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="20dp"
                                 android:layout_marginTop="30dp"
-                                android:text="@string/Contact_with_me"
+                                android:text="@string/contact_with_me"
                                 android:textStyle="bold"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/contact" />
@@ -277,7 +278,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="20dp"
                                 android:layout_marginTop="5dp"
-                                android:text="@string/vk_com_konstantinov"
+                                android:text="@string/vk_com"
                                 android:textColor="@color/black"
                                 android:textSize="16dp"
                                 app:layout_constraintStart_toStartOf="parent"
@@ -289,7 +290,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="10dp"
-                                android:text="@string/instagram_com_konstantinov"
+                                android:text="@string/instagram_com"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/tv_vk" />
 
@@ -309,16 +310,16 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="5dp"
-                                android:text="@string/KMS"
+                                android:text="@string/kms"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/tv_about" />
 
                             <ImageButton
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_marginRight="15dp"
                                 android:layout_marginBottom="20dp"
                                 android:background="@color/white"
-                                android:layout_marginRight="15dp"
                                 android:src="@drawable/ic_edit"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"

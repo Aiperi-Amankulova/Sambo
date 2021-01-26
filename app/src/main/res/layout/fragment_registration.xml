@@ -44,7 +44,7 @@
         android:fontFamily="@font/gilro_regular"
         android:textAllCaps="false"
         android:backgroundTint="@color/red_btn"
-        android:text="@string/btn_registr"
+        android:text="@string/btn_registration"
         android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"

@@ -13,11 +13,11 @@
 
     //Text in registration
     <string name="text_in_tv">Привет! \nТы тут впервые?</string>
-    <string name="btn_registr">Регистрация </string>
+    <string name="btn_registration">Регистрация </string>
     <string name="d">Выбери свою роль</string>
     <string name="sambo">Самбист</string>
     <string name="trener">Тренер</string>
-    <string name="ncjnf">Родитель</string>
+    <string name="parent">Родитель</string>
     <string name="player">Курсы</string>
 
     //Bottom Navigation
@@ -27,19 +27,31 @@
     //Profile
     <string name="photo">Изменить \n фото</string>
     <string name="_1234">школа 1234</string>
-    <string name="Contact_with_me">Связаться со мной</string>
-    <string name="vk_com_konstantinov">vk.com/konstantinov</string>
-    <string name="instagram_com_konstantinov">instagram.com/konstantinov</string>
+    <string name="contact_with_me">Связаться со мной</string>
+    <string name="vk_com">vk.com/konstantinov</string>
+    <string name="instagram_com">instagram.com/konstantinov</string>
     <string name="about_me">Обо мне</string>
-    <string name="KMS">КМС по самбо</string>
+    <string name="kms">КМС по самбо</string>
     <string name="sitting">Настройки личной информации</string>
     <string name="about_project">О проекте</string>
     <string name="exit">Выход</string>
 
     //Competition
     <string name="competition">Соревнования</string>
-    <string name="education">Обучение</string>
     <string name="covid">Из-за ковида соревнования на паузе:( \nСкоро они вернутся, \nа пока тренируйся вместе с нами онлайн!</string>
     <string name="next_on_board">Продолжить</string>
     <string name="skip">Пропустить</string>
+    
+    //Education
+    <string name="topic_education">Тема: Основы боевых искусств</string>
+    <string name="education">Обучение</string>
+
+    //Home
+    <string name="main_home">Главная</string>
+    <string name="days_home">Совет дня</string>
+    <string name="group_home">Подборки</string>
+    <string name="news_home">Новости</string>
+    <string name="all_news_home">Все новости</string>
+    <string name="all_categorias">Все категории</string>
+
 </resources>

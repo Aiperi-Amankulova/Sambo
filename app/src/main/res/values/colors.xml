@@ -17,4 +17,7 @@
 
     //for button
     <color name="red_btn">#E92231</color>
+
+    //home
+    <color name="home_collections">#BFC7F8</color>
 </resources>
