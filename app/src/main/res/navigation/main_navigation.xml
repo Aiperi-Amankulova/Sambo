@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.sambo.splash.SplashFragment"
+        android:label="activity_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_onBoardMainFragment"
+            app:destination="@id/onBoardMainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoardMainFragment"
+        android:name="com.example.sambo.ui.on_boarding.OnBoardingGeneralFragment"
+        android:label="activity_on_board"
+        tools:layout="@layout/page_on_boarding" >
+        <action
+            android:id="@+id/action_onBoardMainFragment_to_registrationOneFragment"
+            app:destination="@id/registrationOneFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrationOneFragment"
+        android:name="com.example.sambo.ui.fragment.registration.RegistrationFragment"
+        android:label="activity_registration"
+        tools:layout="@layout/fragment_registration" >
+        <action
+            android:id="@+id/action_registrationOneFragment_to_registrationTwoFragment2"
+            app:destination="@id/registrationTwoFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrationTwoFragment2"
+        android:name="com.example.sambo.ui.fragment.registration.RegistrationTwoFragment"
+        android:label="activity_second_registration"
+        tools:layout="@layout/fragment_registration_two" >
+        <action
+            android:id="@+id/action_registrationTwoFragment2_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.sambo.ui.fragment.profile_fragment.ProfileFragment"
+        android:label="profile_fragment"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_registrationOneFragment"
+            app:destination="@id/registrationOneFragment" />
+    </fragment>
+</navigation>

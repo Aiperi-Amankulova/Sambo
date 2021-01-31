@@ -4,7 +4,7 @@ import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.paging.DataSource
 import androidx.paging.PageKeyedDataSource
-import com.example.sambo.data.model.home_courses.CoursesModel
+import com.example.sambo.data.model.home_educations.EducationModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -13,7 +13,7 @@ abstract class DataBase <T>(
     private val scope: CoroutineScope
 ) : PageKeyedDataSource<Int, T>() {
 
-    abstract fun getListByPageNumber( limit: Int,page : Int ) : CoursesModel<T>?
+    abstract fun getListByPageNumber( limit: Int,page : Int ) : EducationModel<T>?
 
     private val offset = 20
     private val limit = 20

@@ -1,27 +1,34 @@
 package com.example.sambo.ui.on_boarding
 
 import android.os.Bundle
+import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.viewpager.widget.ViewPager
 import com.example.sambo.R
-import com.example.sambo.data.DataOnBoard
+import com.example.sambo.data.model.cammon.BaseFragment
+import com.example.sambo.data.model.home_cards.RowsItem
 import com.example.sambo.splash.PreferenceHelper
-import com.example.sambo.ui.fragment.BaseFragment
 import kotlinx.android.synthetic.main.page_on_boarding.*
 
-class OnBoardingGeneralFragment : BaseFragment() {
-    private val list = arrayListOf<Fragment>()
-    override fun getViewId() = R.layout.page_on_boarding
+class OnBoardingGeneralFragment(override val it: RowsItem) : BaseFragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    private val list = arrayListOf<Fragment>()
+
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         setupViewPager()
-        setupListener()
+        setupListeners()
     }
 
-    private fun setupListener() {
+    override fun resID() = R.layout.page_on_boarding
+
+
+    private fun setupListeners() {
         vp_page.setOnPageChangeListener(object : ViewPager.OnPageChangeListener {
+            override fun onPageScrollStateChanged(state: Int) {}
+
             override fun onPageScrolled(
                 position: Int,
                 positionOffset: Float,
@@ -30,56 +37,37 @@ class OnBoardingGeneralFragment : BaseFragment() {
             }
 
             override fun onPageSelected(position: Int) {
-                if (checkToPage(position)) {
+                if (isLastPage(position)) {
                     btn_go.text = getString(R.string.next_on_board)
                 } else {
                     btn_go.text = getString(R.string.skip)
                 }
             }
 
-            override fun onPageScrollStateChanged(state: Int) {}
         })
 
         btn_go.setOnClickListener {
-            if (checkToPage(vp_page.currentItem)) {
+            if (isLastPage(vp_page.currentItem)) {
                 PreferenceHelper.setIsFirstLaunch()
-                findNavController().navigate(R.id.main_on_boarding_fragment)
-            } else {
+                findNavController().navigate(R.id.action_onBoardMainFragment_to_registrationOneFragment)
+            }
+            else {
                 vp_page.currentItem += 1
             }
         }
     }
 
-    private fun checkToPage(position: Int) = position == list.size - 1
+    private fun isLastPage(position: Int) = position == list.size - 1
+
 
     private fun setupViewPager() {
-        val adapterl = OnBoardingAdapter(childFragmentManager)
-        vp_page.adapter = adapterl
-        list.add(
-            OnBoardingFragment.getInstance(
-                DataOnBoard(
-                    R.drawable.thir,
-                    getString(R.string.first_text_in_onboard)
-                )
-            )
-        )
-        list.add(
-            OnBoardingFragment.getInstance(
-                DataOnBoard(
-                    R.drawable.se,
-                    getString(R.string.second_text_in_onboard)
-                )
-            )
-        )
-        list.add(
-            OnBoardingFragment.getInstance(
-                DataOnBoard(
-                    R.drawable.first_onb,
-                    getString(R.string.third_text_in_onboard)
-                )
-            )
-        )
-        adapterl.update(list)
+        val adapter = OnBoardingAdapter(childFragmentManager)
+        vp_page.adapter = adapter
+        list.add( OnBoardingFragment.getInstance( OnBoardingModal(getString(R.string.first_text_in_onboard), R.drawable.thir)))
+        list.add( OnBoardingFragment.getInstance( OnBoardingModal(getString(R.string.second_text_in_onboard), R.drawable.se)))
+        list.add( OnBoardingFragment.getInstance( OnBoardingModal(getString(R.string.third_text_in_onboard), R.drawable.first_onb)))
+
+        adapter.update(list)
         slide.setupWithViewPager(vp_page)
     }
 }

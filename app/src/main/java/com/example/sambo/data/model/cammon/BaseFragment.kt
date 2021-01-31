@@ -5,8 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.sambo.data.model.home_cards.RowsItem
 
 abstract class BaseFragment : Fragment() {
+
+    abstract val it: RowsItem
 
     protected abstract fun resID(): Int
 

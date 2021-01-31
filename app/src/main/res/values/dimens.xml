@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="img_new_radius">12dp</dimen>
+    <dimen name="img_radius">32dp</dimen>
+    <dimen name="news">20sp</dimen>
+
+</resources>

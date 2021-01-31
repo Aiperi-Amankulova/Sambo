@@ -6,6 +6,7 @@
     android:layout_height="match_parent">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/general_card"
         android:layout_width="140dp"
         android:layout_height="140dp"
         android:clickable="true"
@@ -18,12 +19,12 @@
             android:layout_height="match_parent"
             android:background="@color/home_collections">
 
-            <ImageView
+            <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/img_collections"
+                android:scaleType="centerCrop"
                 android:layout_width="64dp"
                 android:layout_height="64dp"
-                android:layout_marginTop="13dp"
-                android:scaleType="centerCrop"
+                android:layout_marginTop="15dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />

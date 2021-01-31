@@ -10,6 +10,7 @@
 
     // background
     <color name="bcg_as">#1731C5</color>
+    <color name="img_back">#222934</color>
 
     //tab
     <color name="tab1">#8B98E2</color>

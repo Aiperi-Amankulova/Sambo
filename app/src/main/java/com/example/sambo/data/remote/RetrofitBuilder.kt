@@ -8,13 +8,13 @@ import java.util.concurrent.TimeUnit
 
 object RetrofitBuilder {
 
-    fun buildRetrofit(): CoursesService {
+    fun buildRetrofit(): EducationsService {
         return Retrofit.Builder()
             .baseUrl("https://api.sambo.beta.trinitydigital.ru/")
             .addConverterFactory(GsonConverterFactory.create())
             .client(getClient())
             .build()
-            .create(CoursesService::class.java)
+            .create(EducationsService::class.java)
     }
 
     private fun getClient(): OkHttpClient {

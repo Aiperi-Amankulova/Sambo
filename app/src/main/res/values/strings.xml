@@ -54,4 +54,7 @@
     <string name="all_news_home">Все новости</string>
     <string name="all_categorias">Все категории</string>
 
+    //Tip
+    <string name="okay">хорошо</string>
+
 </resources>

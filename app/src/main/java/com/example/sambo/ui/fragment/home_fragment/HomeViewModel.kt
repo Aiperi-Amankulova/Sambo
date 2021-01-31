@@ -3,17 +3,20 @@ package com.example.sambo.ui.fragment.home_fragment
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.sambo.data.model.CurseList
-import com.example.sambo.data.model.ModelCollection
-import com.example.sambo.data.repository.Repository
+import com.example.sambo.data.model.home_cards.CardsModel
+import com.example.sambo.data.model.home_collections.CollectionsModel
+import com.example.sambo.data.model.home_news.NewsModel
+import com.example.sambo.data.model.tip_the_day.TipOfTheDayModal
+import com.example.sambo.data.repository.SamboRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class HomeViewModel(private val repository: Repository) :  ViewModel() {
+class HomeViewModel(private val repository: SamboRepository) :  ViewModel() {
 
-    val cardsData = MutableLiveData<CurseList>()
-    val collectionsData = MutableLiveData<ModelCollection>()
-    val newsData = MutableLiveData<NewModel>()
+    val cardsData = MutableLiveData<CardsModel>()
+    val collectionsData = MutableLiveData<CollectionsModel>()
+    val newsData = MutableLiveData<NewsModel>()
+    private val tips = MutableLiveData<TipOfTheDayModal>()
 
     fun loadCards() {
         viewModelScope.launch(Dispatchers.IO) {
@@ -42,6 +45,17 @@ class HomeViewModel(private val repository: Repository) :  ViewModel() {
             runCatching {
                 val result = repository.loadNews(20,1)
                 newsData.postValue(result?.body())
+            }.onFailure {
+
+            }
+        }
+    }
+
+    fun tips() {
+        viewModelScope.launch(Dispatchers.IO) {
+            runCatching {
+                val result = repository.tips()
+                tips.postValue(result)
             }.onFailure {
 
             }

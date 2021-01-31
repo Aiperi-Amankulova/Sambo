@@ -4,5 +4,5 @@ import com.example.sambo.R
 
 class CompetitionFragment : BaseFragment() {
 
-   override fun getViewId() = R.layout.fragment_education
+   override fun getViewId() = R.layout.fragment_competition
 }

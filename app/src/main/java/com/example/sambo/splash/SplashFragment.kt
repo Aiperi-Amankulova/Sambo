@@ -22,7 +22,7 @@ class SplashFragment : BaseFragment() {
 
     private fun selectFragment() {
         if (PreferenceHelper.getIsFirstLaunch()) {
-            findNavController().navigate(R.id.splash_fragment_for_general_main)
+            findNavController().navigate(R.id.splashFragment)
         } else {
             val intent = Intent(activity, MainActivity::class.java)
             startActivity(intent)

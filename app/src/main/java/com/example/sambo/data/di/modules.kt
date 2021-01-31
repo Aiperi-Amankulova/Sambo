@@ -1,30 +1,34 @@
 package com.example.sambo.data.di
 
+
 import com.example.sambo.data.interator.SamboInteractor
-import com.example.sambo.data.interator.SamboInteratorService
-import com.example.sambo.data.remote.CoursesService
+import com.example.sambo.data.interator.SamboInteractorService
 import com.example.sambo.data.remote.RetrofitBuilder
 import com.example.sambo.data.repository.SamboRepository
 import com.example.sambo.data.repository.SamboRepositoryInterator
+import com.example.sambo.ui.fragment.education_fragment.EducationViewModel
 import com.example.sambo.ui.fragment.home_fragment.HomeViewModel
+import com.example.sambo.ui.fragment.home_fragment.collection.CollectionsDetailsViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.module.Module
 import org.koin.dsl.module
 
 
 val viewModelModule: Module = module {
-    viewModel { CoursesViewModel(get()) }
+    viewModel { EducationViewModel(get()) }
     viewModel { HomeViewModel(get()) }
+    viewModel { CollectionsDetailsViewModel(get()) }
 }
+
 
 val repositoryModule: Module = module {
     single<SamboRepository> { SamboRepositoryInterator(get()) }
 }
 
-val Module: Module = module {
-    single<CoursesService> { RetrofitBuilder.buildRetrofit() }
-    single<SamboInteractor> { SamboInteratorService(get()) }
+val apiModule: Module = module {
+    single { RetrofitBuilder.buildRetrofit() }
+    single<SamboInteractor> { SamboInteractorService(get()) }
 }
 
-val Modules =
-    listOf(viewModelModule, Module, repositoryModule)
+val appModules =
+    listOf(viewModelModule, apiModule, repositoryModule)
