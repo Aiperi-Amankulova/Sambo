@@ -1,6 +1,7 @@
 package com.example.sambo.data.repository
 
 import com.example.sambo.data.interator.SamboInteractor
+import com.example.sambo.data.interator.SamboInterator
 import com.example.sambo.data.model.tip_the_day.TipOfTheDayModal
 import com.example.sambo.data.model.bottom_sheet.BottomSheetModel
 import com.example.sambo.data.model.home_cards.CardsModel
@@ -25,7 +26,7 @@ interface SamboRepository {
 
 class SamboRepositoryInterator(private val network: SamboInteractor) : SamboRepository {
 
-    override suspend fun loadData(limit: Int, page: Int): EducationsService<RowsItem> {
+    override suspend fun loadData(limit: Int, page: Int): EducationModel<RowsItem> {
         return network.loadData(limit = limit, page = page)
     }
 

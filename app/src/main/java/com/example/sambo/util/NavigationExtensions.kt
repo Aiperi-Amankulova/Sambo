@@ -1,4 +1,4 @@
-package com.example.sambo.utils
+package com.example.sambo.util
 
 /*
  * Copyright 2019, The Android Open Source Project

@@ -31,7 +31,7 @@ abstract  class PhotoFragment : BaseFragment(){
         val uri = getCaptureImageOutputUri(requireContext(), filename!!)
 
         if (uri !=null ){
-            val file = File(uri.path)
+            val file = File(uri?.path)
             if (Build.VERSION.SDK_INT >= 24){
                 intent.putExtra(
                     MediaStore.EXTRA_OUTPUT,

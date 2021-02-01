@@ -2,7 +2,7 @@ package com.example.sambo.data.di
 
 
 import com.example.sambo.data.interator.SamboInteractor
-import com.example.sambo.data.interator.SamboInteractorService
+import com.example.sambo.data.interator.SamboInterator
 import com.example.sambo.data.remote.RetrofitBuilder
 import com.example.sambo.data.repository.SamboRepository
 import com.example.sambo.data.repository.SamboRepositoryInterator
@@ -27,7 +27,7 @@ val repositoryModule: Module = module {
 
 val apiModule: Module = module {
     single { RetrofitBuilder.buildRetrofit() }
-    single<SamboInteractor> { SamboInteractorService(get()) }
+    single<SamboInteractor> { SamboInterator(get()) }
 }
 
 val appModules =

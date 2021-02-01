@@ -21,7 +21,7 @@ interface SamboInteractor{
     suspend fun tips(): TipOfTheDayModal
 }
 
-class SamboInterator (private val service : EducationsService) : SamboInteractor {
+class SamboInterator (private val service : EducationsService ) : SamboInteractor {
 
     override suspend fun loadData(limit: Int, page: Int): EducationModel<RowsItem> {
         return service.getCourses(limit = limit, page = page,order = "{\"id\":\"asc\"}")

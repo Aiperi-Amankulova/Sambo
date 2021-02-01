@@ -1,7 +1,5 @@
 package com.example.sambo.data.model.home_educations
 
-import com.example.sambo.data.model.home_categories.CategoriesHomeItem
-
 
 data class RowsItem(
     val id: Int,
@@ -17,5 +15,5 @@ data class RowsItem(
     val document: String,
     val preview: String,
     val comments_count: Int,
-    val categories: List<CategoriesHomeItem>
+    val categories: List<CategoriesItem>
 )
